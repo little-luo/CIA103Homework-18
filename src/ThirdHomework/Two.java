@@ -8,17 +8,20 @@ public class Two {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int r = (int)(Math.random()*10);
+		int r = (int)(Math.random()*101);
 		int num = 0;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("開始猜數字吧!");
 		while(true) {
 			num = sc.nextInt();
+			if(num > r) {
+				System.out.println("大於正確答案");
+			}
+			if(num < r) {
+				System.out.println("小於正確答案");
+			}
 			if(num == r) {
-				System.out.println("答對了!答案就是" + r);
-				break;
-			}else {
-				System.out.println("猜錯囉");
+				System.out.println("答對了! 答案就是:" + r);
 			}
 		}
 	}
